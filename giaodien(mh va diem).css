@@ -1,0 +1,89 @@
+/* Thiết lập chung cho toàn bộ trang */
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 40px; 
+    line-height: 1.6; 
+    background-color: #f9f9f9; 
+}
+
+/* Định dạng bảng chứa Form */
+table { 
+    border-collapse: collapse; 
+    width: 100%; 
+    max-width: 500px; /* Thu hẹp chiều rộng cho phù hợp giao diện nhập liệu */
+    margin: 0 auto; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    background-color: #fff;
+}
+
+th, td { 
+    padding: 15px; 
+    border: 1px solid #ddd; 
+}
+
+/* Tiêu đề của Form (Thêm/Sửa) */
+th { 
+    background-color: #009688; 
+    color: white; 
+    text-transform: uppercase; 
+    font-size: 16px; 
+    text-align: center;
+}
+
+/* Căn lề cho cột bên trái (nhãn tên trường) */
+td:first-child {
+    font-weight: bold;
+    background-color: #f2f2f2;
+    width: 30%;
+}
+
+/* Định dạng các ô nhập liệu và danh sách chọn */
+input[type="text"], 
+input[type="number"], 
+select {
+    width: 100%; /* Giúp input chiếm hết chiều rộng cột phải */
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; /* Đảm bảo padding không làm tràn khung */
+}
+
+/* Trạng thái chỉ đọc (cho mã môn khi sửa) */
+.input-readonly { 
+    background-color: #eee; 
+    cursor: not-allowed; 
+}
+
+/* Định dạng các nút bấm */
+input[type="submit"], 
+input[type="button"] {
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    margin: 5px;
+}
+
+/* Nút lưu lại/cập nhật (màu xanh lá) */
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Nút hủy (màu xám) */
+input[type="button"] {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Liên kết quay lại trong f_sua_monhoc.php */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}

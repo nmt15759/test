@@ -1,0 +1,239 @@
+/* 1. KHAI BÁO BIẾN - Dễ dàng đổi màu toàn hệ thống */
+:root{
+    --primary-color: #3498db;   /* Xanh dương */
+    --success-color: #2ecc71;   /* Xanh lá */
+    --danger-color: #e74c3c;    /* Đỏ */
+    --warning-color: #f1c40f;   /* Vàng */
+    --info-color: #1abc9c;      /* Xanh ngọc */
+    --dark-color: #2c3e50;      /* Xanh đen */
+    --bg-body: #f4f7f6;
+    --text-color: #333;
+    --border-color: #ddd;
+}
+
+/* 2. THIẾT LẬP CHUNG */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+h2, h3 {
+    text-align: center;
+    color: var(--dark-color);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 3. BẢNG DỮ LIỆU */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px;
+    font-weight: 600;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Hiệu ứng cho dòng đang sửa */
+tr[style*="background-color"] td {
+    border-top: 2px solid var(--warning-color);
+    border-bottom: 2px solid var(--warning-color);
+}
+
+/* 4. FORM NHẬP LIỆU */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Ô nhập liệu trong bảng (chế độ sửa) */
+table .form-control {
+    padding: 5px;
+    font-size: 13px;
+    border: 1px solid var(--primary-color);
+}
+
+/* 5. NÚT BẤM (BUTTONS) */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    padding: 0 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn i { margin-right: 8px; font-size: 0.9em; }
+
+.btn-add { background: var(--success-color); color: white; }
+.btn-add:hover { background: #27ae60; transform: translateY(-1px); }
+
+.btn-delete { background: var(--danger-color); color: white; }
+.btn-delete:hover { background: #c0392b; transform: translateY(-1px); }
+
+.btn-edit { background: var(--warning-color); color: #333; }
+.btn-edit:hover { background: #f39c12; }
+
+.btn-view { background: var(--info-color); color: white; }
+.btn-view:hover { background: #16a085; }
+
+.btn-home { background: var(--dark-color); color: white; }
+.btn-home:hover { background: #1a252f; }
+
+/* 6. LAYOUT & SEARCH */
+.search-box {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.search-box input {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Bo tròn thanh tìm kiếm cho hiện đại */
+    outline: none;
+}
+
+.button-group, .navigation-group {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+/* --- GIAO DIỆN  --- */
+
+/* 1. Phần Tiêu đề màu xanh dương đậm */
+.header-system {
+    background-color: #0d47a1; /* Màu xanh đậm như trong ảnh */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-system h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 2. Phần vùng chứa các nút menu (Nền xám nhạt) */
+.nav-bar {
+    background-color: #e9ecef; /* Màu xám nhạt */
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Tự động xuống dòng nếu hết chỗ */
+    gap: 15px; /* Khoảng cách giữa các nút */
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* 3. Thiết kế từng nút bấm (Dạng thẻ trắng) */
+.nav-bar a {
+    background-color: #ffffff;
+    color: #333;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 8px; /* Bo tròn góc */
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Đổ bóng nhẹ */
+    transition: all 0.3s ease;
+    border: 1px solid transparent; /* Viền trong suốt */
+    min-width: 140px; /* Đảm bảo nút không quá bé */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hiệu ứng khi di chuột vào nút */
+.nav-bar a:hover {
+    transform: translateY(-3px); /* Nổi lên nhẹ */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #0d47a1; /* Chữ chuyển xanh */
+}
+
+/* 4. Nút Đăng xuất (viền đỏ đặc biệt) */
+.nav-bar a.btn-logout {
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    font-weight: bold;
+}
+
+.nav-bar a.btn-logout:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Trạng thái nút đang chọn (Active) */
+.nav-bar a.active {
+    background-color: #0d47a1;
+    color: white;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.2);
+}
+
